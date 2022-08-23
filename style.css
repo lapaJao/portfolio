@@ -1,0 +1,290 @@
+:root {
+    --color1: #0d8007;
+    --color2: #419f35;
+    --color3: #74bf63;
+    --color4: #a8df91;
+    --color5: #dbffbf;
+}
+
+*{
+    scroll-behavior: smooth;
+    text-decoration: none;
+    color: inherit;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0 -1em;
+}
+
+span {
+    color: var(--color1);
+}
+
+.divisor {
+    
+    border-bottom: 1px solid var(--color1);
+    box-shadow: 0 0 1em var(--color4), 0 1px 3px var(--color1);
+
+}
+
+header {
+    z-index: 2;
+    width: 100%;
+    padding: 0.5em;
+
+    position: fixed;
+    top: 0;
+
+    border-bottom: 1px solid var(--color1);
+    box-shadow: 0 0 1em var(--color4);
+
+    background-color: #fff;
+}
+
+header nav {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    margin: 0.5em 2em 0.5em 4em;
+    
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+header nav .search input{
+    border-style: none;
+    background-color: rgb(224, 222, 222);
+    border-radius: 3px;
+}
+
+input {
+    resize: vertical;
+    height: 2em;
+
+    resize: horizontal;
+    width: 10em;
+}
+
+
+header nav .search input::placeholder, 
+header nav .search input:focus{
+    color: rgb(177, 176, 176);
+    text-indent: 0.7em;
+    outline: 0;
+}
+
+header nav .socials {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    gap: 1em;
+
+}
+
+button {
+    border-style: none;
+    background: none;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    padding: 7px;
+    
+    cursor: pointer;
+
+    transition: 0.6s;
+}
+
+.socials .meet{
+    background-color: var(--color3);
+    color: #fff;
+    border-radius: 3px;
+
+    transition: 0.5s;
+}
+
+.socials .github:hover,
+.socials .linkedin:hover,
+.socials .instagram:hover{
+
+    color: var(--color2);
+    transform: scaleX(1.1);
+}
+
+.socials .meet:hover {
+    background-color: var(--color2);
+}
+
+header .logo{
+    font-family: 'Righteous', cursive;
+}
+
+/*SECTIONS*/
+
+section{
+    margin: 4em 4em 3em;
+
+    max-width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    gap: 6em;
+}
+
+.section .section1{
+    margin-top: 4em;
+    display: flex;
+    gap: 25%;
+}
+
+section .section1 ul li{
+    list-style: none;
+
+    font-size: 1em;
+}
+
+.section img{
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+    position: relative; 
+}
+
+@media only screen and (min-width: 420px) {
+    img {
+      height: initial;
+    }
+}
+
+/*SECTION SOFTSKILLS*/
+.softskills {
+    display: flex;
+    columns: 3;
+}
+
+.softskills .box-1,
+.softskills .box-2,
+.softskills .box-3{
+    text-align: center;
+
+    width: 350px;
+    margin: 1em 0 1em;
+    border: 1px inset gray;
+
+    transition: 0.5s;
+}
+
+.softskills .box-1:hover,
+.softskills .box-2:hover,
+.softskills .box-3:hover{
+    box-shadow: 2px 8px 10px 8px var(--color4);
+
+    transform: translateY(-0.25em);
+}
+
+
+/*SECTION CURRICULUM*/
+section .box{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+section .box button,
+section .box button a,
+.projects .loginScreen button,
+.projects .loginScreen button a{
+    padding: 2em;
+
+    background-color: var(--color3);
+    color: #fff;
+
+    border-radius: 3px;
+    transition: 0.7s;
+}
+
+section .box button:hover,
+section .box button a:hover,
+.projects .loginScreen button:hover,
+.projects .loginScreen button a:hover{
+    background-color: var(--color2);
+}
+
+/*section projects*/
+.projects .loginScreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.projects .project-list ul li{
+    margin-top: 0.5em;
+}
+
+
+/*Section certifieds*/
+.certifieds {
+    display: flex;
+    columns: 2;
+
+    justify-content: center;
+}
+
+.certifieds ul li {
+    margin-top: 0.5em;
+}
+
+.certifieds ul li button,
+.certifieds ul li button a {
+    padding: 2em;
+
+    background-color: var(--color3);
+    color: #fff;
+
+    border-radius: 3px;
+    transition: 0.7s;
+}
+
+.certifieds ul li button a:hover,
+.certifieds ul li button:hover{
+    background-color: var(--color2);
+    
+}
+
+/*FOOTER*/
+footer {
+
+    padding: 2em;
+    background: #fff;
+
+    font-size: 1em;
+    font-family: 'Righteous', cursive;
+    
+    text-align: center;
+}
+
+footer .socials {
+    columns: 3;
+    width: auto;
+}
+
+footer .socials .instagram,
+footer .socials .github,
+footer .socials .linkedin{
+    transition: 0.5s;
+}
+
+footer .socials .instagram:hover,
+footer .socials .github:hover,
+footer .socials .linkedin:hover{
+
+    transform: translateY(-0.25em);
+}
