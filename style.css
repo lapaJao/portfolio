@@ -71,6 +71,9 @@ input {
     width: 10em;
 }
 
+header input {
+    width: 30em;
+}
 
 header nav .search input::placeholder, 
 header nav .search input:focus{
@@ -87,6 +90,10 @@ header nav .socials {
     justify-content: space-between;
     gap: 1em;
 
+}
+
+header .menu {
+    visibility: hidden;
 }
 
 button {
@@ -155,12 +162,6 @@ section .section1 ul li{
     position: relative; 
 }
 
-@media only screen and (min-width: 420px) {
-    img {
-      height: initial;
-    }
-}
-
 /*SECTION SOFTSKILLS*/
 .softskills {
     display: flex;
@@ -197,11 +198,21 @@ section .box{
     align-items: center;
 }
 
-section .box button,
-section .box button a,
-.projects .loginScreen button,
-.projects .loginScreen button a{
+section .box button{
     padding: 2em;
+
+    background-color: var(--color3);
+    color: #fff;
+
+    border-radius: 3px;
+    transition: 0.7s;
+}
+
+.projects .projects button a{
+    padding: 2em;
+}
+
+.projects .projects button{
 
     background-color: var(--color3);
     color: #fff;
@@ -212,13 +223,12 @@ section .box button a,
 
 section .box button:hover,
 section .box button a:hover,
-.projects .loginScreen button:hover,
-.projects .loginScreen button a:hover{
+.projects .projects button:hover{
     background-color: var(--color2);
 }
 
 /*section projects*/
-.projects .loginScreen{
+.projects .projects{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -229,12 +239,21 @@ section .box button a:hover,
     margin-top: 0.5em;
 }
 
+.projects .project-list ul li button{
+
+    display: grid;
+
+    grid-auto-rows: max-content;
+}
+
 
 /*Section certifieds*/
 .certifieds {
     display: flex;
     columns: 2;
+    gap: 1em;
 
+    align-items: center;
     justify-content: center;
 }
 
@@ -242,8 +261,11 @@ section .box button a:hover,
     margin-top: 0.5em;
 }
 
-.certifieds ul li button,
 .certifieds ul li button a {
+    padding: 2em;
+}
+
+.certifieds ul li button{
     padding: 2em;
 
     background-color: var(--color3);
@@ -253,7 +275,6 @@ section .box button a:hover,
     transition: 0.7s;
 }
 
-.certifieds ul li button a:hover,
 .certifieds ul li button:hover{
     background-color: var(--color2);
     
@@ -269,6 +290,12 @@ footer {
     font-family: 'Righteous', cursive;
     
     text-align: center;
+}
+
+footer .logo {
+    background: none;
+    margin-bottom: 0.5em;
+    z-index: 0;
 }
 
 footer .socials {
@@ -287,4 +314,130 @@ footer .socials .github:hover,
 footer .socials .linkedin:hover{
 
     transform: translateY(-0.25em);
+}
+
+@media (max-width: 992px){
+
+    header {
+        display: block;
+        justify-content: space-between;
+
+        width: 100%;
+        height: 2.5em;
+    }
+
+    header .search {
+        position: relative;
+        width: 4em;
+        border-radius: 3px;
+    }
+
+    .softskills {
+        display: grid;
+
+        grid-row: inherit;
+        justify-content: center;
+
+        grid-gap: 2em;
+    }
+
+    .softskills .box-1,
+    .softskills .box-2,
+    .softskills .box-3{
+        height: 280px;
+    }
+
+    .project-list {
+        display: grid;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .certifieds {
+        display: inline;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .certifieds h1{
+        text-indent: 2em;
+    }
+}
+
+@media (max-width: 420px){
+
+    html {
+        width: 100vw;
+    }
+
+    *{
+        overflow-x: hidden;
+    }
+
+    header {
+        z-index: 2;
+
+        display: block;
+        position: fixed;
+        top: 0;
+
+        border-bottom: 1px solid var(--color1);
+        box-shadow: 0 0 1em var(--color4);
+
+        background-color: #fff;
+    }
+
+    header nav {
+
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+        margin: 0.5em 2em 0.5em 2em;
+        
+        display: flex;
+        flex-wrap: wrap;
+    
+        align-items: center;
+    
+        justify-content: space-between;
+        background-color: #fff;
+    }
+
+    header .socials{
+        visibility: hidden;
+    }
+
+    header .menu {
+        visibility: visible;
+    }
+
+    header .search {
+        display: flex;
+    }
+
+    section {
+        margin: 1em 0;
+    }
+
+    section .section1 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    section .projects{
+        display: flex;
+        justify-content: center;
+    }
+
+    section .projects h1 {
+        width: fit-content;
+        margin: 0 0 0 2em;
+    }
+
+    section .project-list {
+        margin: 0 2em 0;
+        text-align: justify;
+    }
+
 }
