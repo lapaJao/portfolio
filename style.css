@@ -250,11 +250,12 @@ section .box button a:hover,
 /*Section certifieds*/
 .certifieds {
     display: flex;
-    columns: 2;
-    gap: 1em;
-
+    max-width: max-content;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
+
+    gap: 1em;
+    margin-left: 470px;
 }
 
 .certifieds ul li {
@@ -367,9 +368,39 @@ footer .socials .linkedin:hover{
         align-items: center;
     }
 
+}
+
+@media (max-width: 720px){
+    *{
+        max-width: 720px;
+    }
+
+    .softskills{
+        margin-left: 90px;
+    }
+
+    .curriculum .box{
+        margin-left: 40px;
+    }
+
+    .project-list{
+        margin-left: 60px;
+    }
+
+    .certifieds {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
     .certifieds h1{
         text-indent: 2em;
     }
+
+    footer {
+        text-indent: 2em;
+    }
+
 }
 
 @media (max-width: 420px){
