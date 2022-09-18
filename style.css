@@ -143,13 +143,13 @@ section{
     gap: 6em;
 }
 
-.section .section1{
+.section .sobremim{
     margin-top: 4em;
     display: flex;
     gap: 25%;
 }
 
-section .section1 ul li{
+section .sobremim ul li{
     list-style: none;
 
     font-size: 1em;
@@ -403,6 +403,46 @@ footer .socials .linkedin:hover{
 
 }
 
+@media (max-width: 520px){
+
+    *{
+        max-width: 520px;
+    }
+
+    header {
+        display: flex;
+
+        right: 0;
+        width: 520px;
+        height: 3em;
+        position: fixed;
+        padding: 16px 0;
+
+        justify-content: space-between;
+
+        column-count: 3;
+    }
+
+    header nav {
+        margin-left: 2em;
+
+    }
+
+    header nav .logo{
+        margin-right: 8px;
+    }
+
+    header nav .socials {
+        gap: 0;
+    }
+
+    .sobremim {
+        display: flex;
+        flex-flow: column;
+    }
+
+}
+
 @media (max-width: 420px){
 
     html {
@@ -457,7 +497,7 @@ footer .socials .linkedin:hover{
         margin: 1em 0;
     }
 
-    section .section1 {
+    section .sobremim {
         display: flex;
         flex-wrap: wrap;
     }
