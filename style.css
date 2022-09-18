@@ -441,6 +441,15 @@ footer .socials .linkedin:hover{
         flex-flow: column;
     }
 
+    .projects .projects {
+        display: inline;
+    }
+
+    .projects .projects h1 {
+        text-align: center;
+        text-indent: 2em;
+    }
+
 }
 
 @media (max-width: 420px){
